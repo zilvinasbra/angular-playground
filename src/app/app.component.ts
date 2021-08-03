@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {IamusDateService} from 'iamus-date';
+import {IamusDateService, TestInterface} from 'iamus-date';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +8,13 @@ import {IamusDateService} from 'iamus-date';
 })
 export class AppComponent implements OnInit{
   title = 'modularAppV1';
+
+  prop: TestInterface = {
+    style: {
+      "color": "white",
+    },
+    date: "currentDatetime"
+  }
 
   constructor(private iamusDateService: IamusDateService) {
 
