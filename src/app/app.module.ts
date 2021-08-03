@@ -3,6 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import {IamusDateModule, IamusDateService} from "iamus-date";
+import {IamusWeatherModule} from "iamus-weather";
+import {HttpClientModule} from "@angular/common/http";
+
+
+
 
 @NgModule({
   declarations: [
@@ -10,9 +16,12 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    IamusDateModule,
+    IamusWeatherModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [IamusDateService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
